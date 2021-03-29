@@ -1,3 +1,5 @@
+///should be able to keep as is to us for tech blog 
+
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
@@ -56,3 +58,7 @@ User.init(
 );
 
 module.exports = User;
+
+
+
+///this page imports models, users can have multiple posts

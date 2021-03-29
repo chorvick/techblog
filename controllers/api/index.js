@@ -1,8 +1,12 @@
 const router = require('express').Router();
 const userRoutes = require('./userRoutes');
-const projectRoutes = require('./projectRoutes');
+
 
 router.use('/users', userRoutes);
-router.use('/projects', projectRoutes);
+
 
 module.exports = router;
+
+
+
+/// will need to add routes here to allow logged in users to post to blog
