@@ -20,13 +20,32 @@
 </head>
 
 <body>
-  <div class="flex-column justify-space-around">
+  <div class="wrapper">
+    <header class="hero">
+      <div>
+        <nav class="nav">
+          <a class="link" href="/">Home</a>
+          <a class="link" href="/dashboard">Dashboard</a>
+          {{#if loggedIn}}
+          <a class="link" href="/" id="logout">Logout</a>
+          {{else}}
+          <a class="link" href="/login">Login</a>
+          {{/if}}
+        </nav>
+      </div>
 
+      <h1 class="blog-title">Tech Blog</h1>
+    </header>
 
-    <!-- Render script for logged in users only -->
-    {{#if logged_in}}
-    <script src="/js/logout.js"></script>
-    {{/if}}
+    <main>
+      {{{ body }}}
+    </main>
+  </div>
+
+  {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
+
 </body>
 
 </html>

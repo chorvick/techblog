@@ -40,4 +40,4 @@ Post.init(
 module.exports = Post;
 
 
-/// this page creates post model  --may need to be modified later --- initial buildout only so far
+/// this page creates post model  

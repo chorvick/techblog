@@ -11,12 +11,12 @@ router.get("/", (req, res) => {
             attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
             include: {
                 model: User,
-                attributes: ["username"],
+                attributes: ['username'],
             }
         },
         {
             model: User,
-            attributes: ["username"],
+            attributes: ['username'],
         }
         ]
     })
@@ -66,13 +66,13 @@ router.get("/post.:id", (req, res) => {
             attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
             include: {
                 model: User,
-                attributes: ["username"],
+                attributes: ['username'],
             }
         },
 
         {
             model: User,
-            attributes: ["username"],
+            attributes: ['username'],
 
         },
         ]
@@ -102,25 +102,25 @@ router.get("/post.:id", (req, res) => {
 //// commenting section
 
 
-router.get("/posts-comments", (req, res) => {
+router.get('/posts-comments', (req, res) => {
     Post.findOne({
         where: {
             id: req.params.id
         },
 
-        attributes: ["id", "description", "title", "created_at"],
+        attributes: ['id', 'description', 'title', 'created_at'],
         include: [{
             model: Comment,
-            attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
+            attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
             include: {
                 model: User,
-                attributes: ["username"]
+                attributes: ['username']
             }
 
         },
         {
             model: User,
-            attributes: ["username"]
+            attributes: ['username']
 
         }
         ]
@@ -131,7 +131,7 @@ router.get("/posts-comments", (req, res) => {
                 return;
             }
             const post = dbPostData.get({ plain: true });
-            res.render("posts-comments", { post, loggedIn: req.session.loggedIn });
+            res.render('posts-comments', { post, loggedIn: req.session.loggedIn });
 
 
 

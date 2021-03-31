@@ -1,0 +1,40 @@
+{{> post-info post}}
+
+{{!-- form and comments --}}
+{{#if loggedIn}}
+<div class="card">
+
+    <h4 class="card-header">Comment</h4>
+
+    <form class="card-body comment-form" id="comment-form">
+
+        <div>
+            <textarea id="comment" name="comment-body"></textarea>
+        </div>
+
+        <div>
+            <button type="submit" class="btn">Add Comment</button>
+        </div>
+
+    </form>
+
+
+
+</div>
+
+
+
+
+
+{{/if}}
+
+{{> comments post.comments}}
+
+{{!-- checks if the user is logged in and close out the if at the bottom--}}
+
+
+
+
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+{{/if}}

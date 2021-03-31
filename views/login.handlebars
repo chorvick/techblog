@@ -1,42 +1,41 @@
-<div class="row">
-  <div class="col-md-6">
-    <h2>Login</h2>
+<section class="card">
+  <h3 class="card-header">Login</h3>
+  <form class="login-form card-body">
+    <div>
+      <label for="username-login" class="form-label">Your Username:</label>
+      <input type="text" id="username-login" />
+    </div>
+    <div>
+      <label for="password-login" class="form-label">Your Password</label>
+      <input type="password" id="password-login" />
+    </div>
+    <div>
+      <button type="submit" class="btn">Login</button>
+    </div>
+  </form>
+</section>
 
-    <form class="form login-form">
-      <div class="form-group">
-        <label for="email-login">email:</label>
-        <input class="form-input" type="text" id="email-login" />
-      </div>
-      <div class="form-group">
-        <label for="password-login">password:</label>
-        <input class="form-input" type="password" id="password-login" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">login</button>
-      </div>
-    </form>
-  </div>
-  <div class="col-md-6">
-    <h2>Signup</h2>
 
-    <form class="form signup-form">
-      <div class="form-group">
-        <label for="name-signup">name:</label>
-        <input class="form-input" type="text" id="name-signup" />
-      </div>
-      <div class="form-group">
-        <label for="email-signup">email:</label>
-        <input class="form-input" type="text" id="email-signup" />
-      </div>
-      <div class="form-group">
-        <label for="password-signup">password:</label>
-        <input class="form-input" type="password" id="password-signup" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">signup</button>
-      </div>
-    </form>
-  </div>
-</div>
+<section class="card">
+  <h3 class="card-header">Sign up</h3>
+  <form class="signup-form card-body">
+    <div>
+      <label for="username-signup" class="form-label">Desired Username:</label>
+      <input type="text" id="username-signup" />
+    </div>
+    <div>
+      <label for="password-signup" class="form-label">Password (min 8 char)</label>
+      <input type="password" id="password-signup" />
+    </div>
+    <div>
+      <button type="submit" class="btn">Signup</button>
+    </div>
+  </form>
+</section>
 
-<script src="./js/login.js"></script>
+
+
+
+
+
+<script src="/javascript/login.js"></script>
