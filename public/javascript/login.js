@@ -1,4 +1,4 @@
-const loginFormHandler = async (event) => {
+async function loginFormHandler(event) {
   event.preventDefault();
 
   // Collect values from the login form
@@ -21,8 +21,8 @@ const loginFormHandler = async (event) => {
     }
   }
 };
-
-const signupFormHandler = async (event) => {
+/////signing up
+async function signupFormHandler(event) {
   event.preventDefault();
 
   const username = document.querySelector('#username-signup').value.trim();
@@ -53,4 +53,3 @@ document
   .addEventListener('submit', signupFormHandler);
 
 
-  //// leaving as is for now will have to direct them to proper place after login

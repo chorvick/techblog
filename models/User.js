@@ -22,10 +22,6 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // comments: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    // },
     password: {
       type: DataTypes.STRING,
       allowNull: false,
