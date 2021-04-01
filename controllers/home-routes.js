@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { Post, User, Comment } = require('../models');
-
+const withAuth = require('../utils/auth');
 /// home route
 
 router.get("/", (req, res) => {
@@ -34,12 +34,6 @@ router.get("/", (req, res) => {
 
 });
 
-/// when user needs to sign up
-
-router.get("/signup", (req, res) => {
-    res.render("signup");
-
-});
 
 //// user allready signed up log in
 
@@ -52,8 +46,14 @@ router.get("/login", (req, res) => {
     res.render("login");
 });
 
+/// when user needs to sign up
 
-/// get a post
+router.get("/signup", (req, res) => {
+    res.render("signup");
+
+});
+
+
 
 router.get("/post.:id", (req, res) => {
     Post.findOne({
