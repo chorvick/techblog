@@ -6,7 +6,11 @@ const withAuth = require("../../utils/auth");
 
 
 router.get("/", (req, res) => {
-    Comment.findAll({})
+    Comment.findAll({
+        where: {
+            id: req.params.id
+        }
+    })
 
         .then(dbCommentData => res.json(dbCommentData))
         .catch(err => {
