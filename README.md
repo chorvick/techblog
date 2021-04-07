@@ -1,4 +1,6 @@
-# 14 Model-View-Controller (MVC): Tech Blog
+# Abandoned project please see new repo here 
+
+[HERE](https://github.com/chorvick/techblog2)
 
 ## Your Task
 
